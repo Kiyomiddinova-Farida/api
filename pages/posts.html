@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts - DummyJSON Explorer</title>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1><a href="../index.html"><i class="fas fa-rocket"></i> DummyJSON Explorer</a></h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="home.html" class="nav-link"><i class="fas fa-utensils"></i> Recipes</a></li>
+                        <li><a href="products.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                        <li><a href="users.html" class="nav-link"><i class="fas fa-users"></i> Users</a></li>
+                        <li><a href="posts.html" class="nav-link active"><i class="fas fa-blog"></i> Posts</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        <i class="fas fa-blog"></i>
+                        Latest Posts
+                    </h1>
+                    <p class="page-description">Discover interesting stories and insights from our community</p>
+                </div>
+                <div class="search-filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="post-search" placeholder="Search posts..." />
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All Posts</button>
+                            <button class="filter-btn" data-filter="popular">Popular</button>
+                            <button class="filter-btn" data-filter="recent">Recent</button>
+                        </div>
+                        <div class="sort-filter">
+                            <select id="sort-filter">
+                                <option value="id">Sort by ID</option>
+                                <option value="title">Sort by Title</option>
+                                <option value="reactions">Most Liked</option>
+                                <option value="views">Most Viewed</option>
+                            </select>
+                        </div>
+                        <div class="tags-filter">
+                            <select id="tags-filter">
+                                <option value="all">All Tags</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="posts-section" class="content-section">
+            <div class="container">
+                <div class="loading-spinner" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading amazing posts...</p>
+                </div>
+                <div class="error-message" id="error" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Failed to load posts. Please try again.</p>
+                    <button onclick="loadPosts()" class="btn btn-primary">Retry</button>
+                </div>
+                <div id="posts-list" class="posts-grid"></div>
+                <div class="load-more-container">
+                    <button id="load-more" class="btn btn-secondary" style="display: none;">
+                        <i class="fas fa-plus"></i> Load More Posts
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 DummyJSON Explorer. Built with ❤️ using DummyJSON API.</p>
+        </div>
+    </footer>
+
+    <script src="../js/posts.js"></script>
+</body>
+</html>
