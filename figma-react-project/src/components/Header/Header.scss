@@ -1,0 +1,30 @@
+@import '../../styles/main.scss';
+
+.app__header {
+  .logo {
+    h2 {
+      color: $primary-color;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .nav {
+    &__list {
+      @include responsive(tablet) {
+        flex-direction: column;
+        gap: $spacing-sm;
+      }
+    }
+    
+    &__link {
+      padding: $spacing-xs $spacing-sm;
+      @include border-radius(4px);
+      
+      &:hover,
+      &.active {
+        background-color: rgba($primary-color, 0.1);
+      }
+    }
+  }
+}
