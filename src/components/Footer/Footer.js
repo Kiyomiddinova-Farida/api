@@ -85,11 +85,21 @@ const Footer = () => {
                   <strong>www.company.com</strong>
                 </div>
                 <div className="footer__social">
-                  <a href="#" className="social-link" aria-label="Facebook">📘</a>
-                  <a href="#" className="social-link" aria-label="Instagram">📷</a>
-                  <a href="#" className="social-link" aria-label="Twitter">🐦</a>
-                  <a href="#" className="social-link" aria-label="LinkedIn">💼</a>
-                  <a href="#" className="social-link" aria-label="YouTube">📺</a>
+                  <a href="#" className="social-link social-link--facebook" aria-label="Facebook">
+                    <div className="social-icon social-icon--facebook"></div>
+                  </a>
+                  <a href="#" className="social-link social-link--instagram" aria-label="Instagram">
+                    <div className="social-icon social-icon--instagram"></div>
+                  </a>
+                  <a href="#" className="social-link social-link--twitter" aria-label="Twitter">
+                    <div className="social-icon social-icon--twitter"></div>
+                  </a>
+                  <a href="#" className="social-link social-link--linkedin" aria-label="LinkedIn">
+                    <div className="social-icon social-icon--linkedin"></div>
+                  </a>
+                  <a href="#" className="social-link social-link--youtube" aria-label="YouTube">
+                    <div className="social-icon social-icon--youtube"></div>
+                  </a>
                 </div>
                 <div className="footer__language">
                   <select className="language-select">

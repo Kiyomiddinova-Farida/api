@@ -8,7 +8,8 @@ const TestimonialsSection = () => {
         <div className="testimonials__content">
           <div className="testimonials__text">
             <h2 className="testimonials__title">
-              What our clients say about our awesome solutions
+              What our clients say about<br />
+              our awesome solutions
             </h2>
             <div className="testimonials__description">
               <p>

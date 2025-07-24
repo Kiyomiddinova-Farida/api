@@ -7,31 +7,31 @@ const AwardsSection = () => {
   const awards = [
     {
       id: 1,
-      icon: '🏆',
+      icon: 'trophy',
       title: 'Naxly as the Winners in Global Agency Awards',
       description: 'Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and visual mockups.'
     },
     {
       id: 2,
-      icon: '🎯',
+      icon: 'target',
       title: 'Expert Perspective Agency Awards',
       description: 'Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and visual mockups.'
     },
     {
       id: 3,
-      icon: '💼',
+      icon: 'briefcase',
       title: 'Business Perspective Global Agency Awards',
       description: 'Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and visual mockups.'
     },
     {
       id: 4,
-      icon: '📈',
+      icon: 'chart',
       title: 'Value for Results in Global Agency Awards',
       description: 'Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and visual mockups.'
     },
     {
       id: 5,
-      icon: '🌍',
+      icon: 'rocket',
       title: 'Global Experience in Agency Awards',
       description: 'Lorem ipsum is placeholder text commonly used in print, and publishing industries for previewing layouts and visual mockups.'
     }
@@ -57,7 +57,7 @@ const AwardsSection = () => {
               <div key={award.id} className="award-card">
                 <div className="award-card__icon">
                   <div className="icon-circle">
-                    <span className="icon-emoji">{award.icon}</span>
+                    <div className={`icon-svg icon-svg--${award.icon}`}></div>
                   </div>
                 </div>
                 <div className="award-card__content">

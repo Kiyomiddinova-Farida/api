@@ -56,7 +56,8 @@ const AboutSection = () => {
           
           <div className="about__text">
             <h2 className="about__title">
-              Apply AI, Deep Learning and Data Science to solve
+              Apply AI, Deep Learning<br />
+              and Data Science to solve
             </h2>
             <p className="about__description">
               Lorem Ipsum is placeholder text commonly used in the

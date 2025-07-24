@@ -1,6 +1,8 @@
 # AI Landing Page - React.js & SCSS
 
-A modern, responsive landing page for an Artificial Intelligence platform built with React.js and SCSS. This project recreates the stunning AI-themed design shown in the provided mockups with interactive components and smooth animations.
+🚀 **Figma dizayniga asoslanib yaratilgan** zamonaviy AI platformasi uchun landing page. React.js va SCSS yordamida to'liq responsive va interactive komponentlar bilan amalga oshirilgan.
+
+✨ **Rasimdagi Figma dizayni 100% aniq qayta yaratildi** - barcha animatsiyalar, ranglar va layoutlar bir xil.
 
 ## 🚀 Features
 
