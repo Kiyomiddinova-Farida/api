@@ -44,7 +44,8 @@
           border-radius: 50%;
           position: absolute;
           top: 4px;
-          animation: pulse 2s infinite;
+          box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+          // Static eyes - no pulse animation
           
           &:first-child {
             left: 6px;

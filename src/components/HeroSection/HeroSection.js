@@ -30,84 +30,96 @@ const HeroSection = () => {
           </div>
           
           <div className="hero__visual">
-            <div className="rocket-container">
-              {/* Main Rocket */}
-              <div className="rocket">
-                <div className="rocket__body">
-                  <div className="rocket__window"></div>
-                  <div className="rocket__stripe"></div>
+            <div className="visual-container">
+              {/* Main Rocket Illustration */}
+              <div className="rocket-illustration">
+                <div className="rocket-main">
+                  <div className="rocket-body">
+                    <div className="rocket-window"></div>
+                    <div className="rocket-details">
+                      <div className="detail-line"></div>
+                      <div className="detail-line"></div>
+                    </div>
+                  </div>
+                  <div className="rocket-fins">
+                    <div className="fin-left"></div>
+                    <div className="fin-right"></div>
+                  </div>
+                  <div className="rocket-base"></div>
                 </div>
-                <div className="rocket__fins">
-                  <div className="fin fin--left"></div>
-                  <div className="fin fin--right"></div>
-                </div>
-                <div className="rocket__flame">
-                  <div className="flame-inner"></div>
+                <div className="launch-platform">
+                  <div className="platform-base"></div>
+                  <div className="platform-support"></div>
                 </div>
               </div>
               
-              {/* Orbit Rings */}
-              <div className="orbit-ring orbit-ring--1"></div>
-              <div className="orbit-ring orbit-ring--2"></div>
-              <div className="orbit-ring orbit-ring--3"></div>
+              {/* Circular Elements */}
+              <div className="circular-elements">
+                <div className="circle circle--large"></div>
+                <div className="circle circle--medium"></div>
+                <div className="circle circle--small"></div>
+              </div>
               
-              {/* Floating Cards */}
-              <div className="floating-elements">
-                <div className="floating-card floating-card--1">
+              {/* Data Cards */}
+              <div className="data-cards">
+                <div className="card card--dashboard">
+                  <div className="card-header"></div>
                   <div className="card-content">
-                    <div className="card-icon"></div>
-                    <div className="card-lines">
-                      <span></span>
-                      <span></span>
-                    </div>
+                    <div className="data-row"></div>
+                    <div className="data-row"></div>
+                    <div className="data-row"></div>
                   </div>
                 </div>
-                <div className="floating-card floating-card--2">
-                  <div className="card-content">
-                    <div className="card-chart">
-                      <div className="chart-bar"></div>
-                      <div className="chart-bar"></div>
-                      <div className="chart-bar"></div>
-                    </div>
+                <div className="card card--chart">
+                  <div className="chart-container">
+                    <div className="chart-bar" style={{height: '60%'}}></div>
+                    <div className="chart-bar" style={{height: '100%'}}></div>
+                    <div className="chart-bar" style={{height: '40%'}}></div>
+                    <div className="chart-bar" style={{height: '80%'}}></div>
                   </div>
                 </div>
-                <div className="floating-card floating-card--3">
-                  <div className="card-content">
-                    <div className="card-graph">
-                      <svg viewBox="0 0 40 20" className="graph-line">
-                        <path d="M2,15 Q10,5 18,8 T38,6" stroke="currentColor" fill="none" strokeWidth="2"/>
-                      </svg>
-                    </div>
+                <div className="card card--analytics">
+                  <div className="analytics-circle">
+                    <div className="circle-progress"></div>
+                    <div className="circle-center">85%</div>
                   </div>
                 </div>
               </div>
               
-              {/* Tech Person */}
-              <div className="tech-person">
-                <div className="person-head">
-                  <div className="person-hair"></div>
-                  <div className="person-face"></div>
+              {/* Person Character */}
+              <div className="character">
+                <div className="character-head">
+                  <div className="hair"></div>
+                  <div className="face">
+                    <div className="eyes">
+                      <div className="eye eye--left"></div>
+                      <div className="eye eye--right"></div>
+                    </div>
+                    <div className="mouth"></div>
+                  </div>
                 </div>
-                <div className="person-body">
-                  <div className="person-shirt"></div>
+                <div className="character-body">
+                  <div className="shirt"></div>
+                  <div className="arms">
+                    <div className="arm arm--left"></div>
+                    <div className="arm arm--right"></div>
+                  </div>
                 </div>
-                <div className="person-arms">
-                  <div className="arm arm--left"></div>
-                  <div className="arm arm--right"></div>
-                </div>
-                <div className="person-legs">
+                <div className="character-legs">
                   <div className="leg leg--left"></div>
                   <div className="leg leg--right"></div>
                 </div>
               </div>
               
-              {/* Background Elements */}
-              <div className="bg-elements">
-                <div className="bg-dot bg-dot--1"></div>
-                <div className="bg-dot bg-dot--2"></div>
-                <div className="bg-dot bg-dot--3"></div>
-                <div className="bg-line bg-line--1"></div>
-                <div className="bg-line bg-line--2"></div>
+              {/* Decorative Elements */}
+              <div className="decorative-elements">
+                <div className="deco-dot deco-dot--1"></div>
+                <div className="deco-dot deco-dot--2"></div>
+                <div className="deco-dot deco-dot--3"></div>
+                <div className="deco-line deco-line--1"></div>
+                <div className="deco-line deco-line--2"></div>
+                <div className="deco-triangle"></div>
+                <div className="deco-square"></div>
               </div>
             </div>
           </div>

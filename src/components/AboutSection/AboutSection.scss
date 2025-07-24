@@ -21,7 +21,7 @@
   }
   
   &__text {
-    animation: fadeInUp 1s ease;
+    // Static text section - no animations
   }
   
   &__title {
@@ -50,7 +50,7 @@
     justify-content: center;
     align-items: center;
     height: 600px;
-    animation: fadeInUp 1s ease 0.3s both;
+    // Static visual - no animations
   }
 }
 
@@ -86,7 +86,7 @@
       height: 10px;
       background: linear-gradient(135deg, #4f7df3 0%, #00d4ff 100%);
       border-radius: 5px;
-      animation: pulse 2s ease-in-out infinite;
+      // Static glow - no pulse animation
     }
   }
   
@@ -104,7 +104,7 @@
 .brain {
   position: relative;
   z-index: 10;
-  animation: float 4s ease-in-out infinite;
+  // Static brain - no floating animation
   
   .brain-hemisphere {
     width: 80px;
@@ -172,42 +172,37 @@
     height: 12px;
     background: var(--gradient-primary);
     border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(79, 125, 243, 0.6);
+    // Static nodes - no pulse animation
     
     &--1 {
       top: 20%;
       left: 15%;
-      animation-delay: 0s;
     }
     
     &--2 {
       top: 30%;
       right: 20%;
-      animation-delay: 0.5s;
     }
     
     &--3 {
       bottom: 30%;
       left: 10%;
-      animation-delay: 1s;
     }
     
     &--4 {
       bottom: 25%;
       right: 15%;
-      animation-delay: 1.5s;
     }
     
     &--5 {
       top: 50%;
       left: 5%;
-      animation-delay: 2s;
     }
     
     &--6 {
       top: 60%;
       right: 10%;
-      animation-delay: 2.5s;
     }
   }
   
@@ -216,7 +211,8 @@
     height: 2px;
     background: linear-gradient(90deg, rgba(79, 125, 243, 0.6) 0%, rgba(0, 212, 255, 0.6) 100%);
     transform-origin: left center;
-    animation: pulse 3s ease-in-out infinite;
+    border-radius: 1px;
+    // Static connections - no pulse animation
     
     &--1 {
       top: 22%;
@@ -347,32 +343,29 @@
         height: 6px;
         background: white;
         border-radius: 50%;
-        animation: pulse 1.5s ease-in-out infinite;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+        // Static pupil - no pulse animation
       }
     }
     
     &--1 {
       top: 10%;
       left: 5%;
-      animation: float 3s ease-in-out infinite;
     }
     
     &--2 {
       top: 20%;
       right: 10%;
-      animation: float 4s ease-in-out infinite 1s;
     }
     
     &--3 {
       bottom: 20%;
       left: 0%;
-      animation: float 3.5s ease-in-out infinite 2s;
     }
     
     &--4 {
       bottom: 10%;
       right: 5%;
-      animation: float 4.5s ease-in-out infinite 1.5s;
     }
   }
 }
