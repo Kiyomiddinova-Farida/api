@@ -1,0 +1,126 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-gray-dark);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-btn {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  background: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signin-btn:hover {
+  background: var(--color-gray-light);
+}
+
+.signup-btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.signup-btn:hover {
+  background: var(--color-gray-dark);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .auth-buttons {
+    gap: 0.5rem;
+  }
+  
+  .auth-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .logo span {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
