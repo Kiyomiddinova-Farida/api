@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "John",
+      "lname": "Doe",
+      "age": 32,
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "fname": "Jane",
+      "lname": "Smith",
+      "age": 28,
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "fname": "Mike",
+      "lname": "Johnson",
+      "age": 35,
+      "gender": "male"
+    }
+  ]
+}
