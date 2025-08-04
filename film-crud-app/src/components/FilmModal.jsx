@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './FilmModal.css';
 
 class FilmModal extends Component {
   constructor(props) {
@@ -83,86 +82,153 @@ class FilmModal extends Component {
     ];
 
     return (
-      <div className="modal-overlay" onClick={this.handleOverlayClick}>
-        <div className="modal-content">
-          <div className="modal-header">
-            <h2>{isEditing ? 'Film Ma\'lumotlarini Yangilash' : 'Yangi Film Qo\'shish'}</h2>
-            <button className="close-btn" onClick={onClose}>×</button>
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-5 backdrop-blur-sm animate-fade-in"
+        onClick={this.handleOverlayClick}
+      >
+        <div className="bg-white rounded-xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto animate-slide-in">
+          {/* Header */}
+          <div className="flex justify-between items-center p-6 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-t-xl">
+            <h2 className="text-xl font-semibold">
+              {isEditing ? 'Film Ma\'lumotlarini Yangilash' : 'Yangi Film Qo\'shish'}
+            </h2>
+            <button 
+              className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 hover:rotate-90 transition-all duration-300"
+              onClick={onClose}
+            >
+              <span className="text-xl">×</span>
+            </button>
           </div>
 
-          <form onSubmit={this.handleSubmit} className="film-form">
-            <div className="form-group">
-              <label htmlFor="title">Film Nomi *</label>
+          {/* Form */}
+          <form onSubmit={this.handleSubmit} className="p-6">
+            {/* Title Field */}
+            <div className="mb-5">
+              <label htmlFor="title" className="block mb-2 text-gray-700 font-semibold text-sm">
+                Film Nomi *
+              </label>
               <input
                 type="text"
                 id="title"
                 name="title"
                 value={title}
                 onChange={this.handleInputChange}
-                className={errors.title ? 'error' : ''}
+                className={`w-full px-4 py-3 border-2 rounded-lg text-base transition-all duration-300 bg-white ${
+                  errors.title 
+                    ? 'border-red-500 focus:ring-2 focus:ring-red-100' 
+                    : 'border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+                } focus:outline-none`}
                 placeholder="Film nomini kiriting"
               />
-              {errors.title && <span className="error-message">{errors.title}</span>}
+              {errors.title && (
+                <span className="block text-red-500 text-xs mt-1 font-medium">
+                  {errors.title}
+                </span>
+              )}
             </div>
 
-            <div className="form-group">
-              <label htmlFor="genre">Janr *</label>
+            {/* Genre Field */}
+            <div className="mb-5">
+              <label htmlFor="genre" className="block mb-2 text-gray-700 font-semibold text-sm">
+                Janr *
+              </label>
               <select
                 id="genre"
                 name="genre"
                 value={genre}
                 onChange={this.handleInputChange}
-                className={errors.genre ? 'error' : ''}
+                className={`w-full px-4 py-3 border-2 rounded-lg text-base transition-all duration-300 bg-white cursor-pointer ${
+                  errors.genre 
+                    ? 'border-red-500 focus:ring-2 focus:ring-red-100' 
+                    : 'border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+                } focus:outline-none`}
               >
                 <option value="">Janr tanlang</option>
                 {genreOptions.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                  <option key={option} value={option} className="py-2">
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.genre && <span className="error-message">{errors.genre}</span>}
+              {errors.genre && (
+                <span className="block text-red-500 text-xs mt-1 font-medium">
+                  {errors.genre}
+                </span>
+              )}
             </div>
 
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="rating">Reyting *</label>
+            {/* Rating and Year Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+              {/* Rating Field */}
+              <div>
+                <label htmlFor="rating" className="block mb-2 text-gray-700 font-semibold text-sm">
+                  Reyting *
+                </label>
                 <select
                   id="rating"
                   name="rating"
                   value={rating}
                   onChange={this.handleInputChange}
-                  className={errors.rating ? 'error' : ''}
+                  className={`w-full px-4 py-3 border-2 rounded-lg text-base transition-all duration-300 bg-white cursor-pointer ${
+                    errors.rating 
+                      ? 'border-red-500 focus:ring-2 focus:ring-red-100' 
+                      : 'border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+                  } focus:outline-none`}
                 >
                   {[1, 2, 3, 4, 5].map(num => (
-                    <option key={num} value={num}>
+                    <option key={num} value={num} className="py-2">
                       {num} ⭐
                     </option>
                   ))}
                 </select>
-                {errors.rating && <span className="error-message">{errors.rating}</span>}
+                {errors.rating && (
+                  <span className="block text-red-500 text-xs mt-1 font-medium">
+                    {errors.rating}
+                  </span>
+                )}
               </div>
 
-              <div className="form-group">
-                <label htmlFor="year">Chiqqan Yili *</label>
+              {/* Year Field */}
+              <div>
+                <label htmlFor="year" className="block mb-2 text-gray-700 font-semibold text-sm">
+                  Chiqqan Yili *
+                </label>
                 <input
                   type="number"
                   id="year"
                   name="year"
                   value={year}
                   onChange={this.handleInputChange}
-                  className={errors.year ? 'error' : ''}
+                  className={`w-full px-4 py-3 border-2 rounded-lg text-base transition-all duration-300 bg-white ${
+                    errors.year 
+                      ? 'border-red-500 focus:ring-2 focus:ring-red-100' 
+                      : 'border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+                  } focus:outline-none`}
                   min="1900"
                   max={new Date().getFullYear() + 5}
                   placeholder="2024"
                 />
-                {errors.year && <span className="error-message">{errors.year}</span>}
+                {errors.year && (
+                  <span className="block text-red-500 text-xs mt-1 font-medium">
+                    {errors.year}
+                  </span>
+                )}
               </div>
             </div>
 
-            <div className="form-actions">
-              <button type="button" className="cancel-btn" onClick={onClose}>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-end pt-5 border-t border-gray-200">
+              <button 
+                type="button" 
+                className="px-6 py-3 bg-gray-600 text-white rounded-lg font-semibold hover:bg-gray-700 hover:-translate-y-0.5 transition-all duration-300 min-w-[120px] order-2 sm:order-1"
+                onClick={onClose}
+              >
                 Bekor qilish
               </button>
-              <button type="submit" className="submit-btn">
+              <button 
+                type="submit" 
+                className="px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 min-w-[120px] order-1 sm:order-2"
+              >
                 {isEditing ? 'Yangilash' : 'Qo\'shish'}
               </button>
             </div>
