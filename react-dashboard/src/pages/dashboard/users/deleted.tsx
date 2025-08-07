@@ -1,0 +1,7 @@
+import React from 'react'
+
+const UsersDeleted: React.FC = () => {
+  return <div className="p-4 rounded bg-white dark:bg-gray-800 shadow">Deleted users</div>
+}
+
+export default React.memo(UsersDeleted)
