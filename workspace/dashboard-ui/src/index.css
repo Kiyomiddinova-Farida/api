@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* basic reset */
+html, body, #root {
+  height: 100%;
+}
+
+:root {
+  color-scheme: light;
+}
