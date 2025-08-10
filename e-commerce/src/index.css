@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Base container widths similar to the design */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-[1280px];
+}
+
+/* Header specific small helpers */
+.badge {
+  @apply absolute -top-1 -right-1 h-4 min-w-[16px] rounded-full bg-red-500 text-white text-[10px] leading-4 text-center;
+}
+
+.link-muted {
+  @apply text-gray-500 hover:text-gray-800 transition-colors;
+}
