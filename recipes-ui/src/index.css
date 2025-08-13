@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Custom base styles */
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Smooth scrolling for tag row */
+.tag-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
